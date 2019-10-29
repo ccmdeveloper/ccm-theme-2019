@@ -1,0 +1,40 @@
+@media screen{
+	section.section-area {
+		padding:50px 0;  
+		@include breakpoint(lg) {
+			padding:70px 0; 
+		}
+		&.no-gutters{
+			padding:0;  
+			& > .container-fluid,
+			& > .container{
+				padding:0;
+				margin:0;
+			}
+		}
+		.heading{
+			text-align: center;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+	}
+
+	section.banner-area{
+		position: relative;
+		overflow: hidden;
+		.container,
+		.breadcrumbs{
+			position: relative;
+			z-index: 3;
+		}
+		.bg {
+			@include position(absolute,0,0,0,0);
+			height: 100%;
+			min-height: 100%;
+			z-index: 2;
+			img{
+				display: none;
+			}
+		}
+	}
+}

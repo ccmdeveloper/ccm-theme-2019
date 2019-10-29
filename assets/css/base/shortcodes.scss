@@ -1,0 +1,68 @@
+@media screen{
+
+	.post-slider-wrapper{
+		margin:0 -15px;
+	}
+	.post-slider{
+		.post-item{
+			padding:0 15px;
+		}
+		.image-wrapper{
+			margin-bottom: 20px;
+		}
+		.image{
+			padding-top: 300px / 500px * 100%;
+		}
+
+		.slick-arrow{
+			background: $secondary-color;
+			color: white;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			border:none;
+			margin-top:-20px;
+			@include position(absolute,50%,0,0,auto);
+			@include breakpoint(xl) {
+				right: -40px;
+			}
+			&:hover{
+				background:$main-color;
+			}
+			&.slick-prev{
+				left:0;
+				right: auto;
+				@include breakpoint(xl) {
+					left: -40px;
+				}
+			}
+		}
+
+		.slick-dots{
+			padding-top:50px;
+			padding-left:0;
+			margin: 0;
+			list-style: none;
+			text-align: center;
+			li{
+				display: inline-block;
+				margin:0 3px;
+			}
+			button{
+				width: 10px;
+				height: 10px;
+				display: block;
+				border:1px solid $secondary-color;
+				border-radius:50%;
+				text-indent:-9999px;
+				overflow: hidden;
+				padding: 0;
+			}
+			.slick-active button{
+				background: $secondary-color;
+			}
+		}
+
+	}
+}
